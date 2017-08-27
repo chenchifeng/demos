@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>居中大法</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            position: relative;
+            /* 宽度不设置的时候就是继承父级元素*/
+            width: 100%;
+            /* 高度不设置的时候是由内容撑起来的 */
+            height: 600px;
+            border: 1px solid #000;
+        }
+
+        /*水平居中*/
+        /*.block-horizontal-center {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: red;
+        }*/
+        .block-horizontal-center {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            /*这两个其实不用一定等于0,只要两边相等就可以,让auto给两边一个相等的margin填满,然后救居中了*/
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: red;
+        }
+
+
+        /*垂直居中*/
+        .block-vertical-center {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            background-color: blue;
+        }
+        /*.block-vertical-center {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        margin-top: -50px;
+        background-color: blue;
+        }*/
+
+        /* 水平垂直都居中 */
+        .block-center {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            background-color: yellow;
+        }
+        /*高度不确定时*/
+        /*.block-vertical-center {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: -50px auto 0px auto;
+            background-color: blue;
+        }*/
+
+        /*文本居中*/
+        .text-horizontal-center {
+            height:100px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .text-vertical-center {
+            height:100px;
+            line-height: 100px;
+            border: 1px solid #000;
+        }
+        .text-center {
+            height:100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        img {
+            /* 图片设置了宽度之后,高度就会按比例缩放 */
+            width: 100px;
+        }
+        /*图片水平居中*/
+        .img-horizontal-container {
+            height:200px;
+            width: 200px;
+            /*图片可以像文字那样直接在父级设置text-align来水平居中*/
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /*图片垂直居中*/
+        .img-vertical-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .img-v-center {
+            /*这里的设置和块状元素居中的设置一样*/
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .img-center-container {
+            position: relative;
+            height:200px;
+            width: 200px;
+            /*这里图片不可以用height和line-height设置相同高度来居中*/
+            /*vertical-align: middle;*/
+            border: 1px solid #000;
+        }
+        .img-center {
+            /*这种脱离了文件流的居中,只能用绝对定位了*/
+            /*width: 100px;
+            margin: 0 auto;*/
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+    </style>
+
+<body>
+</head>
+    <div class="container">
+        <div class="block-horizontal-center">我是水平居中的块状元素</div>
+        <div class="block-vertical-center">我是垂直居中的块状元素</div>
+        <div class="block-center">我是水平垂直都居中的块状元素</div>
+    </div>
+    <div class="container">
+        <div class="text-horizontal-center">我是水平居中的文本</div>
+        <div class="text-vertical-center">我是垂直居中的文本</div>
+        <div class="text-center">我是水平垂直都居中的文本</div>
+    </div>
+    <div class="container">
+        <div class="img-horizontal-container"><img src="image.jpg" alt="我是水平居中图片" class="img-h-center"></div>
+        <div class="img-vertical-container"><img src="image.jpg" alt="我是垂直居中图片" class="img-v-center"></div>
+        <div class="img-center-container"><img src="image.jpg" alt="我是水平垂直都居中图片" class="img-center"></div>
+    </div>
+</body>
+</html>
