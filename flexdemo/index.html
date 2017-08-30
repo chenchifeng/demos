@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex Demo</title>
+	<style type="text/css">
+		.flex-container {
+			/*container属性*/
+			/* 1.  使用display: flex; 之后就会根据主轴方向排成一排*/
+			display: flex;
+
+			/* 2. align-items: flex-start(向上对齐) | flex-end(向下对齐) | center(居中) | baseline(第一行文字基线) | stretch;(auto,未设置会铺满)*/
+			/* 垂直居中(主轴/水平交点)*/
+			align-items: center;
+
+			/* 3. justify-content: flex-start(左对齐) | flex-end(右对齐) | center(居中) | space-between(两边对齐,[0  0  0]) | space-around;(间隔相等,[ 0  0  0 ])*/
+			/*水平居中(交叉轴/垂直交点)*/
+			justify-content: center;
+
+			/* 4. flex-direction: row(默认→) | row-reverse(←) | column(↓) | column-reverse(↑);*/
+			/*例子:从上到下排列显示*/
+			/*flex-direction: column;*/
+
+			/* 5. flex-wrap: nowrap(默认,不换行) | wrap(换行) | wrap-reverse;(向上换行,第一行在下方)*/
+			/*例子:换行(容器宽度不足时)*/
+			/*flex-wrap: wrap;*/
+
+			/* 6. align-content: flex-start | flex-end | center | space-between | space-around | stretch;*/
+
+
+			min-width: 960px;
+			height: 600px;
+			background-color: yellow;
+		}
+		.flex-item {
+			width: 300px;
+			margin: 50px;
+			background-color: blue;
+		}
+		.flex-item-1 {
+			/* item属性 */
+			/* 1. order:数值;  (数值确定排序,越小排在越前面) */
+			/* 2. flex-grow:数值; (项目放大比例,例如2,就是宽度变成原来两倍)*/
+			/* 3. flex-shrink:数值; (项目缩小比例)*/
+			/* 4. flex-basis:数值 | auto; (项目占主轴空间)*/
+			/* 5. flex: 2 3 4; (上面2 3 4条的整合)*/
+			/* 6. align-self:auto | flex-start | flex-end | center | baseline | stretch; (给item单独设置align-items(垂直对齐)) */
+			height: 200px;
+		}
+		.flex-item-2 {
+			height: 400px;
+		}
+		.flex-item-3 {
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item flex-item-1">11111</div>
+		<div class="flex-item flex-item-2">22222</div>
+		<div class="flex-item flex-item-3">33333</div>
+	</div>
+</body>
+</html>
