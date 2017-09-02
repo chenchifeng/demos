@@ -1,0 +1,14 @@
+/*默认隐藏li*/
+#video li {
+    background: #ff9d9c;
+    display:none;
+}
+
+/*显示li*/
+#video .active {
+    display: block;
+}
+
+#btn .active {
+    background: #ff9d9c;
+}

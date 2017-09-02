@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>E-Timer</title>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <button id="btn1">Clear(STOP)</button>
+    </body>
+    <script>
+        var oDiv = document.getElementById('div1'),
+            oBtn = document.getElementById('btn1');
+        // 封装一个方法来获得星期中文
+        function showDay(date){
+            return "日一二三四五六".charAt(date.getDay());
+            // switch(date.getDay()){
+            //     case 0 : return '日';
+            //     case 1 : return '一';
+            //     case 2 : return '二';
+            //     case 3 : return '三';
+            //     case 4 : return '四';
+            //     case 5 : return '五';
+            //     case 6 : return '六';
+            //     default: return '出错了!'
+            //     // 这里return是结束整个function,返回值给function。break是结束switch
+            // }
+         }
+        //  写一个方法来获得01格式
+        function showTime(num){
+            // num = parseInt(num);
+            if(num >= 0 && num < 10){
+                return '0' + num;
+            }else{
+                return num;
+            }
+        }
+
+        // 封装一个方法把格式化的时间写入oDiv.innerHTMl
+        function getTheTime(){
+            // 创建Date()对象(获取创建时的浏览器时间)
+            var date = new Date();
+            // 分别获取各单位数值
+            var year      = date.getFullYear(),
+                month     = date.getMonth()+1,
+                dates     = date.getDate(),
+                day       = showDay(date),
+                hours     = showTime(date.getHours()),
+                minutes   = showTime(date.getMinutes()),
+                seconds   = showTime(date.getSeconds());
+            //写入oDiv标签里
+            oDiv.innerHTML = year + '年' + month + '月' + dates + '日,  ' + '星期' + day + '  ' + hours + ':' + minutes + ':' + seconds;
+        }
+        // 设置定时器,例如setInterval(function(){...},1000);   //这里的1000是毫秒,也就是每个一秒执行一次function（匿名函数）里面的内容。(其实每次都是获得现在的时间,所以就算写1000以内都是一样效果,就是可能比较资源)
+        // 注意：定时器如果执行的不是匿名函数，而是一个函数的话，是不用写括号（）的。
+        var timer = setInterval(getTheTime,1000);
+
+        // 设置oBtn的onclick事件,清除定时器
+        // 在不用的时候一定要关闭定时器, 因为大量的控制器会消耗内存
+        oBtn.onclick = function(){
+            clearInterval(timer);
+        };
+
+        // // 把获得的时间在html输出   ,  注意这些全部都是方法
+        // oDiv.innerHTML = date.getFullYear() + '年' + date.getMonth() + '月' + date.getDate() + '日,  ' + '星期' + date.getDay() + '  ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+        // // 获取年份(并输出,下同)    , getYear的时候就是1900年开始到现在过了多少年
+        // console.log(date.getFullYear());
+        // console.log(date.getYear() + 1900);
+        // console.log(date.getFullYear() === date.getYear() + 1900)
+        //
+        // // 获得月份(这里是从 0 开始获得的, 也就是1月就是0, 如此类推)
+        // console.log(date.getMonth() + 1);
+        //
+        // // 获取日期/几号
+        // console.log(date.getDate());
+        //
+        // // 获取星期 , 这里输出的是数字
+        // console.log(date.getDay());
+        //
+        // // 获取时   ,注意: 时分秒 这里如果是个位数,不会补0. 而且方法名都有s
+        // console.log(date.getHours());
+        //
+        // // 获取分
+        // console.log(date.getMinutes());
+        //
+        // // 获取秒
+        // console.log(date.getSeconds());
+        //
+        // //获取 毫秒时间戳 (从 1970年1月1日 至今 的 毫秒数) ,   后端通常需要的/返回的是这个
+        // console.log(date.getTime());
+        // console.log(date.valueOf());
+
+
+        // 获取本地日期时间格式字符串, 注意:这里的local后面有e,  返回2017/8/15 下午10:55:12
+        // console.log(date.toLocaleString());
+
+        // 获取本地时间格式字符串, 注意:这里的local后面有e,而且多了个Time,  返回下午10:55:12
+        // console.log(date.toLocaleTimeString());
+
+        //  PS:UTC日期指的是在没有时区偏差的情况下(将日期转换为GMT时间)的日起值
+        // 只要在get后面加上就可以了 获得UTC日期对应的值了
+
+        // 如果要把 时间戳 转换成 时间 那就要 去掉后三位(毫秒数) 再进行转换
+
+        // get就是获取 , set就是设置。
+
+        //  new Date(时间戳 * 1000) 的时候还是 顺便设置了这个date的时间了。  如果没有设置那就是默认本地浏览器时间。
+
+
+
+        // 封装一个函数，获得一个预测有多少天
+        function _getMaxDay(Y,M){
+            return new Date(Y,M,0).getDate();
+        }
+
+        console.log(_getMaxDay(2017,2));
+    </script>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>布局</title>
+    <style>
+        .container {
+            position:relative;
+            min-width: 960px;
+            height: 200px;
+            margin: 5px auto;
+        }
+        /* float + margin */
+        .left-float {
+            float:left;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .right-auto {
+            margin-left: 300px;
+            height:200px;
+            background-color: blue;
+        }
+
+        /* absolute + margin */
+        .right-absolute {
+            /*注意:需要container设置position:relative;*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .left-auto {
+            margin-right: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+        /* 三列-中间自适应-float+margin */
+        .th-left-float {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .th-middle-margin {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+        .th-right-float {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        /* 三列-中间宽度自适应*/
+        .th-left-absolute {
+            /*注意:需要container设置position:relative;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .th-middle-auto {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+        .th-right-absolute {
+            /*注意:需要container设置position:relative;*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- float + margin -->
+    <div class="container">
+        <div class="left-float">
+            侧边栏宽度固定
+        </div>
+        <div class="right-auto">
+            主内容栏宽度自适应
+        </div>
+    </div>
+    <!-- absolute + margin -->
+    <div class="container">
+        <div class="left-auto">
+            主内容栏宽度自适应
+        </div>
+        <div class="right-absolute">
+            侧边栏宽度固定
+        </div>
+    </div>
+
+    <!-- 三列-中间自适应-float+margin -->
+    <!-- 这里要足以DOM顺序,要先写侧栏,然后再下中间的,不然右边侧栏会被推下去 -->
+    <div class="container">
+        <div class="th-left-float">
+            左边栏宽度固定
+        </div>
+        <div class="th-right-float">
+            右边栏宽度固定
+        </div>
+        <div class="th-middle-margin">
+            中间栏宽度自适应
+        </div>
+    </div>
+
+    <!-- 三列-中间自适应-absolute -->
+    <div class="container">
+        <div class="th-left-absolute">
+            左边栏宽度固定
+        </div>
+        <div class="th-middle-auto">
+            中间栏宽度自适应
+        </div>
+        <div class="th-right-absolute">
+            右边栏宽度固定
+        </div>
+    </div>
+</body>
+</html>
