@@ -1,15 +1,15 @@
-## ÕâÀï´æ·Å×ÅÒ»Ğ©Æ½Ê±×Ô¼ºĞ´µÄÒ»Ğ©Ğ¡demo¡£
+## è¿™é‡Œå­˜æ”¾ç€ä¸€äº›å¹³æ—¶è‡ªå·±å†™çš„ä¸€äº›å°demoã€‚
 
-1. [¾ÓÖĞ£¨center£©]: https://github.com/chenchifeng/demos/tree/master/center
+1. [å±…ä¸­ï¼ˆcenterï¼‰](https://github.com/chenchifeng/demos/tree/master/center)
 
-2. [CSS¶¯»­(animation)]:https://github.com/chenchifeng/demos/tree/master/animation
+2. [CSSåŠ¨ç”»(animation)](https://github.com/chenchifeng/demos/tree/master/animation)
 
-3. [Flex²¼¾Ö(µ¯ĞÔ²¼¾Öflexdemo)]:https://github.com/chenchifeng/demos/tree/master/flexdemo
+3. [Flexå¸ƒå±€(å¼¹æ€§å¸ƒå±€flexdemo)](https://github.com/chenchifeng/demos/tree/master/flexdemo)
 
-4. [²¼¾Ö(layout)]:https://github.com/chenchifeng/demos/tree/master/layout
+4. [å¸ƒå±€(layout)](https://github.com/chenchifeng/demos/tree/master/layout)
 
-5. [Date()¶ÔÏóºÍ¶¨Ê±Æ÷(etimer)]:https://github.com/chenchifeng/demos/tree/master/etimer
+5. [Date()å¯¹è±¡å’Œå®šæ—¶å™¨(etimer)](https://github.com/chenchifeng/demos/tree/master/etimer)
 
-6. [DOM(tab)]:https://github.com/chenchifeng/demos/tree/master/tab
+6. [DOM(tab)](https://github.com/chenchifeng/demos/tree/master/tab)
 
-7. [×Ö·û´®ºÍÊı×é×ª»»(str-arr)]:https://github.com/chenchifeng/demos/tree/master/str-arr
+7. [å­—ç¬¦ä¸²å’Œæ•°ç»„è½¬æ¢(str-arr)](https://github.com/chenchifeng/demos/tree/master/str-arr)
