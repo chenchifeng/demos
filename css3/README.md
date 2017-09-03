@@ -1,5 +1,5 @@
 # CSS3的新特性
-只写了部分,参考自[W3CShool](http://www.w3school.com.cn/css3/)
+只写了部分,参考自[W3School](http://www.w3school.com.cn/css3/)
 
 ## CSS3 2D转换 (transform)
 通过CSS3转换(transform),能够对元素进行 移动 , 缩放 , 转动 , 拉长 或 拉伸.
@@ -40,7 +40,7 @@
     ```css
         .elem {
             /* 水平翻转180度 */
-            transform: skew(180deg,0reg);
+            transform: skew(180deg,0deg);
         }
     ```
 
