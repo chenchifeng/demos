@@ -13,3 +13,5 @@
 6. [DOM(tab)](https://github.com/chenchifeng/demos/tree/master/tab)
 
 7. [字符串和数组转换(str-arr)](https://github.com/chenchifeng/demos/tree/master/str-arr)
+
+8. [CSS3的新特性(css3)](https://github.com/chenchifeng/demos/tree/master/css3 )
