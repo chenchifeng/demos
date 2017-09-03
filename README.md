@@ -1,4 +1,4 @@
-## 这里存放着一些平时自己写的一些小demo。
+﻿## 这里存放着一些平时自己写的一些小demo。
 
 1. [居中（center）](https://github.com/chenchifeng/demos/tree/master/center)
 
@@ -15,3 +15,5 @@
 7. [字符串和数组转换(str-arr)](https://github.com/chenchifeng/demos/tree/master/str-arr)
 
 8. [CSS3的新特性(css3)](https://github.com/chenchifeng/demos/tree/master/css3 )
+
+9. [跟随导航demo](https://github.com/chenchifeng/demos/tree/master/跟随导航demo )
