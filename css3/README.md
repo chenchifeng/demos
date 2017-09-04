@@ -65,9 +65,9 @@
     但是效果上,对应的x,y,z轴不一样,效果也会不一样,3D的就是3D的效果.
 
 ## CSS3 过渡 (transition)
-    当元素属性发生变化时,会根据给定的效果曲线,来发生一个 渐变的过渡 效果. 
+    当元素属性发生变化时,会根据给定的效果曲线,来发生一个 渐变 的过渡 效果. 
     简写语法:
-        transtion:  属性名(如果是全部就是all) 过渡时间(毫秒) 速度曲线(效果) 延时(可选);
+        transtion:  属性名(如果是全部就是all) 过渡时间(s或ms,要带单位) 速度曲线(效果) 延时(可选);
     可能的值:
         transition-property: 属性名 | all(所有) |none(没有) ;
         transition-timing-function: linear(线性) | ease(由慢到快再慢) | ease-in (慢速开始) | ease-out (慢速结束) | ease-in-out(慢速开始和结束) | cubic-bezier(n,n,n,n) (自定义);

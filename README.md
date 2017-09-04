@@ -17,3 +17,5 @@
 8. [CSS3的新特性(css3)](https://github.com/chenchifeng/demos/tree/master/css3 )
 
 9. [跟随导航demo](https://github.com/chenchifeng/demos/tree/master/跟随导航demo )
+
+10. [jQuery整理(jquery)](https://github.com/chenchifeng/demos/tree/master/jquery )
